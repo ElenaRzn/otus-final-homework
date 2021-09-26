@@ -2,7 +2,7 @@ package ru.otus.homework.spark
 
 import org.apache.spark.sql.QueryTest.checkAnswer
 import org.apache.spark.sql.Row
-import org.apache.spark.sql.functions.{col, explode}
+import org.apache.spark.sql.functions.{col, explode, flatten}
 import org.apache.spark.sql.test.SharedSparkSession
 import ru.otus.homework.data.dto.{LogRecord, Scoring}
 import ru.otus.homework.spark.LogsAnalyzer
@@ -71,9 +71,9 @@ class LogAnalyzerTest extends SharedSparkSession{
 
     ).toDS
     println("///////////////////////")
-    ds.select(col("scorings")).where(col("scorings").isNotNull).select(explode(col("scorings")).as("ddd")).show
+    val fff = ds.select(col("scorings")).where(col("scorings").isNotNull).select(explode(col("scorings")).as("ddd")).select(col("ddd.*")).printSchema()
     println("///////////////////////")
-    ds.select(col("scorings")).where(col("scorings").isNotNull).select(explode(col("scorings")).as("ddd")).printSchema()
+//    ds.select(col("scorings")).where(col("scorings").isNotNull).select(explode(col("scorings")).as("ddd")).printSchema()
 //    val result = LogsAnalyzer.calculateErrors(ds)
 //
 //    checkAnswer(
