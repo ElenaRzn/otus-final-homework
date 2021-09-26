@@ -1,0 +1,533 @@
+{
+  "logs": [
+    {
+      "event_id": "00p3_0000000000000745930:f3d354471dfc11eca1b1e156a04ffdee",
+      "scorings": [
+        {
+          "name": "SCORING_RB_Python3",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632573280348,
+          "timeReceiveAnswerForIgnite": 1632573280349,
+          "timeReceiveDataForModel": 1632573280349,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        },
+        {
+          "name": "SCORING_RB",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632573280347,
+          "timeReceiveAnswerForIgnite": 1632573280349,
+          "timeReceiveDataForModel": 1632573280349,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        }
+      ],
+      "timeReceive": 1632573280344,
+      "timeFinished": 1632573280349,
+      "errorData": "NULL"
+    },
+    {
+      "event_id": "250921162932427|81966",
+      "scorings": [
+        {
+          "name": "SCORING_RB_Python3",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632576572585,
+          "timeReceiveAnswerForIgnite": 1632576572586,
+          "timeReceiveDataForModel": 1632576572586,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        },
+        {
+          "name": "SCORING_RB",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632576572585,
+          "timeReceiveAnswerForIgnite": 1632576572586,
+          "timeReceiveDataForModel": 1632576572586,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        }
+      ],
+      "timeReceive": 1632576572584,
+      "timeFinished": 1632576572586,
+      "errorData": "NULL"
+    },
+    {
+      "event_id": "250921163204566|83697",
+      "scorings": [
+        {
+          "name": "SCORING_RB_Python3",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632576724737,
+          "timeReceiveAnswerForIgnite": 1632576724737,
+          "timeReceiveDataForModel": 1632576724737,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        },
+        {
+          "name": "SCORING_RB",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632576724737,
+          "timeReceiveAnswerForIgnite": 1632576724737,
+          "timeReceiveDataForModel": 1632576724737,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        }
+      ],
+      "timeReceive": 1632576724736,
+      "timeFinished": 1632576724737,
+      "errorData": "NULL"
+    },
+    {
+      "event_id": "250921163338840|91878",
+      "scorings": [
+        {
+          "name": "SCORING_RB_Python3",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632576819091,
+          "timeReceiveAnswerForIgnite": 1632576819092,
+          "timeReceiveDataForModel": 1632576819092,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        },
+        {
+          "name": "SCORING_RB",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632576819091,
+          "timeReceiveAnswerForIgnite": 1632576819092,
+          "timeReceiveDataForModel": 1632576819092,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        }
+      ],
+      "timeReceive": 1632576819089,
+      "timeFinished": 1632576819092,
+      "errorData": "NULL"
+    },
+    {
+      "event_id": "250921163342488|83872",
+      "scorings": [
+        {
+          "name": "SCORING_RB_Python3",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632576822659,
+          "timeReceiveAnswerForIgnite": 1632576822660,
+          "timeReceiveDataForModel": 1632576822660,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        },
+        {
+          "name": "SCORING_RB",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632576822659,
+          "timeReceiveAnswerForIgnite": 1632576822660,
+          "timeReceiveDataForModel": 1632576822660,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        }
+      ],
+      "timeReceive": 1632576822659,
+      "timeFinished": 1632576822660,
+      "errorData": "NULL"
+    },
+    {
+      "event_id": "250921163349845|87917",
+      "scorings": [],
+      "timeReceive": 1632576830012,
+      "timeFinished": 1632576830012,
+      "errorData": "NULL"
+    },
+    {
+      "event_id": "250921163713871|31567",
+      "scorings": [
+        {
+          "name": "SCORING_RB_Python3",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632577034064,
+          "timeReceiveAnswerForIgnite": 1632577034064,
+          "timeReceiveDataForModel": 1632577034064,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        },
+        {
+          "name": "SCORING_RB",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632577034064,
+          "timeReceiveAnswerForIgnite": 1632577034064,
+          "timeReceiveDataForModel": 1632577034064,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        }
+      ],
+      "timeReceive": 1632577034063,
+      "timeFinished": 1632577034064,
+      "errorData": "NULL"
+    },
+    {
+      "event_id": "00p3_0000000000000745931:26044cc21dfd11ec8010c945b3871705",
+      "scorings": [],
+      "timeReceive": 1632573364586,
+      "timeFinished": 1632573364588,
+      "errorData": "NULL"
+    },
+    {
+      "event_id": "250921162812426|84134",
+      "scorings": [
+        {
+          "name": "SCORING_RB_Python3",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632576492620,
+          "timeReceiveAnswerForIgnite": 1632576492621,
+          "timeReceiveDataForModel": 1632576492621,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        },
+        {
+          "name": "SCORING_RB",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632576492620,
+          "timeReceiveAnswerForIgnite": 1632576492621,
+          "timeReceiveDataForModel": 1632576492621,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        }
+      ],
+      "timeReceive": 1632576492617,
+      "timeFinished": 1632576492621,
+      "errorData": "NULL"
+    },
+    {
+      "event_id": "250921162815950|91996",
+      "scorings": [
+        {
+          "name": "SCORING_RB_Python3",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632576496143,
+          "timeReceiveAnswerForIgnite": 1632576496143,
+          "timeReceiveDataForModel": 1632576496143,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        },
+        {
+          "name": "SCORING_RB",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632576496143,
+          "timeReceiveAnswerForIgnite": 1632576496143,
+          "timeReceiveDataForModel": 1632576496143,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        }
+      ],
+      "timeReceive": 1632576496142,
+      "timeFinished": 1632576496143,
+      "errorData": "NULL"
+    },
+    {
+      "event_id": "250921162846806|68467",
+      "scorings": [
+        {
+          "name": "SCORING_RB_Python3",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632576526955,
+          "timeReceiveAnswerForIgnite": 1632576526955,
+          "timeReceiveDataForModel": 1632576526955,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        },
+        {
+          "name": "SCORING_RB",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632576526955,
+          "timeReceiveAnswerForIgnite": 1632576526955,
+          "timeReceiveDataForModel": 1632576526955,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        }
+      ],
+      "timeReceive": 1632576526954,
+      "timeFinished": 1632576526955,
+      "errorData": "NULL"
+    },
+    {
+      "event_id": "250921163032492|48148",
+      "scorings": [
+        {
+          "name": "SCORING_RB_Python3",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632576632666,
+          "timeReceiveAnswerForIgnite": 1632576632666,
+          "timeReceiveDataForModel": 1632576632666,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        },
+        {
+          "name": "SCORING_RB",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632576632666,
+          "timeReceiveAnswerForIgnite": 1632576632666,
+          "timeReceiveDataForModel": 1632576632666,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        }
+      ],
+      "timeReceive": 1632576632665,
+      "timeFinished": 1632576632666,
+      "errorData": "NULL"
+    },
+    {
+      "event_id": "250921163524743|59571",
+      "scorings": [
+        {
+          "name": "SCORING_RB_Python3",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632576924920,
+          "timeReceiveAnswerForIgnite": 1632576924921,
+          "timeReceiveDataForModel": 1632576924921,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        },
+        {
+          "name": "SCORING_RB",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632576924920,
+          "timeReceiveAnswerForIgnite": 1632576924920,
+          "timeReceiveDataForModel": 1632576924920,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        }
+      ],
+      "timeReceive": 1632576924919,
+      "timeFinished": 1632576924921,
+      "errorData": "NULL"
+    },
+    {
+      "event_id": "00p5_0000000000000502429:5390861a1e0611eca5f14f0b62187732",
+      "scorings": [],
+      "timeReceive": 1632577306469,
+      "timeFinished": 1632577306470,
+      "errorData": "NULL"
+    },
+    {
+      "event_id": "00p3_0000000000000745929:e011cdb31dfc11eca1b19b0379e62663",
+      "scorings": [
+        {
+          "name": "SCORING_RB_Python3",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632573247241,
+          "timeReceiveAnswerForIgnite": 1632573247241,
+          "timeReceiveDataForModel": 1632573247241,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        },
+        {
+          "name": "SCORING_RB",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632573247241,
+          "timeReceiveAnswerForIgnite": 1632573247241,
+          "timeReceiveDataForModel": 1632573247241,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        }
+      ],
+      "timeReceive": 1632573247240,
+      "timeFinished": 1632573247241,
+      "errorData": "NULL"
+    },
+    {
+      "event_id": "25092116265286|55898",
+      "scorings": [
+        {
+          "name": "SCORING_RB_Python3",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632576412294,
+          "timeReceiveAnswerForIgnite": 1632576412294,
+          "timeReceiveDataForModel": 1632576412294,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        },
+        {
+          "name": "SCORING_RB",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632576412294,
+          "timeReceiveAnswerForIgnite": 1632576412294,
+          "timeReceiveDataForModel": 1632576412294,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        }
+      ],
+      "timeReceive": 1632576412293,
+      "timeFinished": 1632576412294,
+      "errorData": "NULL"
+    },
+    {
+      "event_id": "250921162843311|65335",
+      "scorings": [
+        {
+          "name": "SCORING_RB_Python3",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632576523478,
+          "timeReceiveAnswerForIgnite": 1632576523478,
+          "timeReceiveDataForModel": 1632576523478,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        },
+        {
+          "name": "SCORING_RB",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632576523477,
+          "timeReceiveAnswerForIgnite": 1632576523478,
+          "timeReceiveDataForModel": 1632576523478,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        }
+      ],
+      "timeReceive": 1632576523476,
+      "timeFinished": 1632576523478,
+      "errorData": "NULL"
+    },
+    {
+      "event_id": "250921163411726|45811",
+      "scorings": [],
+      "timeReceive": 1632576851904,
+      "timeFinished": 1632576851905,
+      "errorData": "NULL"
+    },
+    {
+      "event_id": "25092021163622000028",
+      "scorings": [],
+      "timeReceive": 1632576982635,
+      "timeFinished": 1632576982635,
+      "errorData": "NULL"
+    },
+    {
+      "event_id": "25092021163631000720",
+      "scorings": [],
+      "timeReceive": 1632576992225,
+      "timeFinished": 1632576992226,
+      "errorData": "NULL"
+    },
+    {
+      "event_id": "250921163641301|91918",
+      "scorings": [
+        {
+          "name": "SCORING_RB_Python3",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632577001463,
+          "timeReceiveAnswerForIgnite": 1632577001463,
+          "timeReceiveDataForModel": 1632577001463,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        },
+        {
+          "name": "SCORING_RB",
+          "score": -1,
+          "instance": "NULL",
+          "version": -1,
+          "build": -1,
+          "timeAskIgnite": 1632577001463,
+          "timeReceiveAnswerForIgnite": 1632577001463,
+          "timeReceiveDataForModel": 1632577001463,
+          "errorType": "IGNITE_EXCEPTION",
+          "errorData": null
+        }
+      ],
+      "timeReceive": 1632577001461,
+      "timeFinished": 1632577001463,
+      "errorData": "NULL"
+    },
+    {
+      "event_id": "250921163644774|37772",
+      "scorings": [],
+      "timeReceive": 1632577004927,
+      "timeFinished": 1632577004928,
+      "errorData": "NULL"
+    }
+  ]
+}
