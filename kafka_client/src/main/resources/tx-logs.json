@@ -69,7 +69,7 @@
       "scorings": [
         {
           "name": "SCORING_RB_Python3",
-          "score": -1,
+          "score": 70,
           "instance": "NULL",
           "version": -1,
           "build": -1,
@@ -81,7 +81,7 @@
         },
         {
           "name": "SCORING_RB",
-          "score": -1,
+          "score": 67,
           "instance": "NULL",
           "version": -1,
           "build": -1,
@@ -101,7 +101,7 @@
       "scorings": [
         {
           "name": "SCORING_RB_Python3",
-          "score": -1,
+          "score": 81,
           "instance": "NULL",
           "version": -1,
           "build": -1,

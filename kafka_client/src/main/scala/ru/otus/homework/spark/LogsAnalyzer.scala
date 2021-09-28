@@ -1,8 +1,9 @@
 package ru.otus.homework.spark
 
-import org.apache.spark.sql.functions.{col, count, explode, grouping}
+import org.apache.spark.sql.functions.{broadcast, col, count, explode, grouping}
 import org.apache.spark.sql.{DataFrame, Dataset, SparkSession, functions}
 import ru.otus.homework.data.dto.LogRecord
+import ru.otus.homework.data.FileReader
 
 /***
  * 1. посчитать кол-во пустых ответов;
@@ -39,6 +40,24 @@ object LogsAnalyzer {
         functions.min("ignite_response_time"),
         functions.max("ignite_response_time"),
         functions.avg("ignite_response_time"))
+  }
+
+  def prepareSuccessStatistics(ds: Dataset[LogRecord]): DataFrame = {
+    val fraud = FileReader.readCSV("src/main/resources/fraud.csv")(spark)
+
+    ds.join(broadcast(fraud), col("event_id") === col("event"))
+      .withColumn("flat_scors", explode(col("scorings")))
+      .select(col("flat_scors.*"), col("timeReceive"), col("timeFinished"))
+      .where(col("flat_scors.score") =!= -1)
+      .withColumn("response_time", col("timeFinished") - col("timeReceive"))
+  }
+
+  def countTrueFraud(preparedDs: DataFrame): DataFrame = {
+    preparedDs.filter(col("score") > 65)
+  }
+
+  def countMissedFraud(preparedDs: DataFrame): DataFrame = {
+    preparedDs.filter(col("score") <= 65)
   }
 
 

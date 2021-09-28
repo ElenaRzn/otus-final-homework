@@ -17,7 +17,7 @@ case class Scoring(
                     timeAskIgnite: Long,
                     timeReceiveAnswerForIgnite: Long,
                     timeReceiveDataForModel: Long,
-                    errorType: String,
+                    errorType: Option[String],
                     errorData: Option[String]
                   )
 case class Full(logs: List[LogRecord])
