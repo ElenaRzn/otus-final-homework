@@ -2,10 +2,8 @@ package ru.otus.homework.spark
 
 import org.apache.spark.sql.QueryTest.checkAnswer
 import org.apache.spark.sql.Row
-import org.apache.spark.sql.functions.{col, explode, flatten}
 import org.apache.spark.sql.test.SharedSparkSession
 import ru.otus.homework.data.dto.{LogRecord, Scoring}
-import ru.otus.homework.spark.LogsAnalyzer
 
 import java.util.UUID
 
@@ -61,23 +59,51 @@ class LogAnalyzerTest extends SharedSparkSession{
     )
   }
 
-  test("join - join using") {
+  test("errorsStatistics") {
     val ds = Seq(
       generateEmptyScor(1632577001461L, 1632577001463L),
       generateEmptyScor(1632577001461L, 1632577001463L),
       generateEmptyScor(1632577001461L, 1632577001463L),
-      generateErrorScor(1632577001463L, 1632577001463L, 1632577001463L, "IGNITE_EXCEPTION", 1632577001461L, 1632577001463L),
-      generateErrorScor(1632577001463L, 1632577001463L, 1632577001463L, "IGNITE_EXCEPTION", 1632577001461L, 1632577001463L)
+      generateErrorScor(1632577001463L, 1632577002845L, 1632577001463L, "IGNITE_EXCEPTION", 1632577001461L, 1632577001463L),
+      generateErrorScor(1632577001463L, 1632577005555L, 1632577001463L, "IGNITE_EXCEPTION", 1632577001461L, 1632577001463L),
+      generateErrorScor(1632577001463L, 1632577006767L, 1632577001463L, "MODEL_EXCEPTION", 1632577001461L, 1632577001463L),
+      generateErrorScor(1632577001463L, 1632577003434L, 1632577001463L, "MODEL_EXCEPTION", 1632577001461L, 1632577001463L),
+      generateErrorScor(1632577001463L, 1632577008756L, 1632577001463L, "MODEL_EXCEPTION", 1632577001461L, 1632577001463L),
+      generateErrorScor(1632577001463L, 1632577005643L, 1632577001463L, "MODEL_EXCEPTION", 1632577001461L, 1632577001463L)
 
     ).toDS
-    println("///////////////////////")
-    val fff = ds.select(col("scorings")).where(col("scorings").isNotNull).select(explode(col("scorings")).as("ddd")).select(col("ddd.*")).printSchema()
-    println("///////////////////////")
-//    ds.select(col("scorings")).where(col("scorings").isNotNull).select(explode(col("scorings")).as("ddd")).printSchema()
-//    val result = LogsAnalyzer.calculateErrors(ds)
-//
-//    checkAnswer(
-//      result,
-//      Row(1, "1", "2") :: Row(2, "2", "3") :: Row(3, "3", "5") :: Nil)
+
+    val result = LogsAnalyzer.errorsStatistics(ds)
+
+    checkAnswer(
+      result,
+      Row("MODEL_EXCEPTION", 8, 1971, 7293, 4687.0) :: Row("IGNITE_EXCEPTION", 4, 1382, 4092, 2737.0) :: Nil)
+  }
+
+  test("emptyStatistics") {
+    val ds = Seq(
+      generateEmptyScor(1632577001461L, 1632577001463L),
+      generateEmptyScor(1632577001461L, 1632577001463L),
+      generateEmptyScor(1632577001461L, 1632577001463L),
+      generateErrorScor(1632577001463L, 1632577002845L, 1632577001463L, "IGNITE_EXCEPTION", 1632577001461L, 1632577001463L),
+      generateErrorScor(1632577001463L, 1632577005555L, 1632577001463L, "IGNITE_EXCEPTION", 1632577001461L, 1632577001463L),
+      generateErrorScor(1632577001463L, 1632577006767L, 1632577001463L, "MODEL_EXCEPTION", 1632577001461L, 1632577001463L),
+      generateErrorScor(1632577001463L, 1632577003434L, 1632577001463L, "MODEL_EXCEPTION", 1632577001461L, 1632577001463L),
+      generateErrorScor(1632577001463L, 1632577008756L, 1632577001463L, "MODEL_EXCEPTION", 1632577001461L, 1632577001463L),
+      generateErrorScor(1632577001463L, 1632577005643L, 1632577001463L, "MODEL_EXCEPTION", 1632577001461L, 1632577001463L)
+
+    ).toDS
+
+    val result = LogsAnalyzer.emptyStatistics(ds)
+
+    println("******************************")
+    result.printSchema()
+    result.show
+    println("******************************")
+
+    checkAnswer(
+      result,
+      Row(3, 2, 2, 2.0) :: Nil
+    )
   }
 }
