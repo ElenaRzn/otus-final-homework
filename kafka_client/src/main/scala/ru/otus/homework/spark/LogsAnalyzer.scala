@@ -1,9 +1,8 @@
 package ru.otus.homework.spark
 
-import org.apache.spark.sql.functions.{broadcast, col, count, explode, grouping}
-import org.apache.spark.sql.{DataFrame, Dataset, SparkSession, functions}
+import org.apache.spark.sql.functions.{broadcast, col, count, explode}
+import org.apache.spark.sql.{DataFrame, Dataset, functions}
 import ru.otus.homework.data.dto.LogRecord
-import ru.otus.homework.data.FileReader
 
 /***
  * 1. посчитать кол-во пустых ответов;
@@ -12,11 +11,6 @@ import ru.otus.homework.data.FileReader
  * 4. сджоинить с файлом с ответами и проверить скоринги, где они неошибочные.
  */
 object LogsAnalyzer {
-
-  val spark = SparkSession.builder()
-    .appName("tx-logs_analyzer")
-    .config("spark.master", "local")
-    .getOrCreate()
 
   //считаем кол-во неуспешных ответов
   def emptyStatistics(ds: Dataset[LogRecord]): DataFrame = {
@@ -42,9 +36,7 @@ object LogsAnalyzer {
         functions.avg("ignite_response_time"))
   }
 
-  def prepareSuccessStatistics(ds: Dataset[LogRecord]): DataFrame = {
-    val fraud = FileReader.readCSV("src/main/resources/fraud.csv")(spark)
-
+  def prepareSuccessStatistics(ds: Dataset[LogRecord], fraud: DataFrame): DataFrame = {
     ds.join(broadcast(fraud), col("event_id") === col("event"))
       .withColumn("flat_scors", explode(col("scorings")))
       .select(col("flat_scors.*"), col("timeReceive"), col("timeFinished"))

@@ -3,6 +3,7 @@ package ru.otus.homework.spark
 import org.apache.spark.sql.QueryTest.checkAnswer
 import org.apache.spark.sql.Row
 import org.apache.spark.sql.test.SharedSparkSession
+import ru.otus.homework.data.FileReader
 import ru.otus.homework.data.dto.{LogRecord, Scoring}
 
 import java.util.UUID
@@ -116,6 +117,11 @@ class LogAnalyzerTest extends SharedSparkSession{
 
     val result = LogsAnalyzer.errorsStatistics(ds)
 
+    println("******************************")
+    result.printSchema()
+    result.show
+    println("******************************")
+
     checkAnswer(
       result,
       Row("MODEL_EXCEPTION", 8, 1971, 7293, 4687.0) :: Row("IGNITE_EXCEPTION", 4, 1382, 4092, 2737.0) :: Nil)
@@ -162,7 +168,9 @@ class LogAnalyzerTest extends SharedSparkSession{
       generateErrorScor(1632577001463L, 1632577008756L, 1632577001463L, "MODEL_EXCEPTION", 1632577001461L, 1632577001463L),
     ).toDS
 
-    val result = LogsAnalyzer.prepareSuccessStatistics(ds)
+    val fraud = FileReader.readCSV("src/main/resources/fraud.csv")(spark)
+
+    val result = LogsAnalyzer.prepareSuccessStatistics(ds, fraud)
 
     println("******************************")
     result.printSchema()
@@ -184,7 +192,15 @@ class LogAnalyzerTest extends SharedSparkSession{
 
     ).toDS
 
-    val result = LogsAnalyzer.countTrueFraud(LogsAnalyzer.prepareSuccessStatistics(ds))
+    val fraud = FileReader.readCSV("src/main/resources/fraud.csv")(spark)
+
+
+    val result = LogsAnalyzer.countTrueFraud(LogsAnalyzer.prepareSuccessStatistics(ds, fraud))
+
+    println("******************************")
+    result.printSchema()
+    result.show
+    println("******************************")
 
     assert(result.count() == 6)
   }
@@ -198,8 +214,15 @@ class LogAnalyzerTest extends SharedSparkSession{
       generateSuccessScor(1632577001463L, 1632577005643L, 1632577001463L, 60, 1632577001461L, 1632577001463L, Some("00p3_0000000000000745931:26044cc21dfd11ec8010c945b3871754"))
 
     ).toDS
+    val fraud = FileReader.readCSV("src/main/resources/fraud.csv")(spark)
 
-    val result = LogsAnalyzer.countMissedFraud(LogsAnalyzer.prepareSuccessStatistics(ds))
+
+    val result = LogsAnalyzer.countMissedFraud(LogsAnalyzer.prepareSuccessStatistics(ds, fraud))
+
+    println("******************************")
+    result.printSchema()
+    result.show
+    println("******************************")
 
     assert(result.count() == 4)
   }

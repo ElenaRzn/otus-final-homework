@@ -26,3 +26,14 @@ services:
             KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
             KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
             KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+#    postgres:
+#        image: postgres:latest
+#        container_name: postgres
+#        environment:
+#            - "TZ=Europe/Amsterdam"
+#            - "POSTGRES_USER=docker"
+#            - "POSTGRES_PASSWORD=docker"
+#        ports:
+#            - "5432:5432"
+#        volumes:
+#            - "./db.sql:/docker-entrypoint-initdb.d"

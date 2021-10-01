@@ -23,8 +23,8 @@ object Consumer {
       .asScala
       .map(record => record.value())
 
-    log.debug(s"data size = ${data.size}")
-    data.foreach(log.debug(_))
+    println(s"data size = ${data.size}")
+    data.foreach(println)
 
     consumer.close()
     data
